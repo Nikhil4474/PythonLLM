@@ -96,5 +96,9 @@ a = int(input("Age of Delivery Person: "))
 b = float(input("Ratings of Previous Delivers: "))
 c = int(input("Total Distance: "))
 
+
 features = np.array(([a,b,c]))
+
+features = features.reshape((1, 3, 1))
+
 print("Predicted Delivery Time in Minutes = ", model.predict(features))
